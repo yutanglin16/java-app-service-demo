@@ -17,4 +17,5 @@ jobs:
       with:
         app-name: "my-cool-app"
         publish-profile: ${{ secrets.SRING_DEMO_PUBLISH_PROFILE }}
+        package: /backend/target/*.jar
       
