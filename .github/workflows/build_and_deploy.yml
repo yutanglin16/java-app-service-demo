@@ -17,10 +17,6 @@ jobs:
     
     # Maven build
     - name: Build and test with Maven
-      env:
-        SPRING_DATASOURCE_URL: ${{ secrets.db_url }}
-        SPRING_DATASOURCE_PASSWORD: ${{ secrets.db_password }}
-        SPRING_DATASOURCE_USERNAME: ${{ secrets.db_username }}
       run: mvn clean package
 
     # Finally, deploy the container to App Service
