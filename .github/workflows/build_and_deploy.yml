@@ -3,7 +3,7 @@ name: Build and deploy a Spring app to App Service
 on:
   push:
     branches:
-      springdemo
+      msi-test
 
 jobs:
   build:
