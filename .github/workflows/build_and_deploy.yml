@@ -25,3 +25,9 @@ jobs:
         app-name: 'spring-one-demo'
         publish-profile: ${{ secrets.CREDENTIALS }}
         package: 'target/app.jar'
+
+    - uses: azure/webapps-deploy@v1
+      with:
+        app-name: 'freebergwindowsjavase'
+        publish-profile: ${{ secrets.PUB_PROFILE_FREEBERGWINDOWSJAVASE }}
+        package: 'target/app.jar'
