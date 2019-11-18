@@ -32,11 +32,11 @@ jobs:
   
     # Tag the image with the git commit hash
     - run: |
-        docker build . -t jasonfreeberg/dockerspringdemo:${{ github.sha }}
-        docker push jasonfreeberg/dockerspringdemo:${{ github.sha }}
+        docker build . -t yutanglin16/dockerspringdemo:${{ github.sha }}
+        docker push yutanglin16/dockerspringdemo:${{ github.sha }}
 
     # Finally, deploy the container to App Service
     - uses: azure/webapps-container-deploy@v1
       with:
         app-name: 'githubActionsDockerContainer'
-        images: 'jasonfreeberg/dockerspringdemo:${{ github.sha }}'
+        images: 'yutanglin16/dockerspringdemo:${{ github.sha }}'
