@@ -38,5 +38,5 @@ jobs:
     # Finally, deploy the container to App Service
     - uses: azure/webapps-container-deploy@v1
       with:
-        app-name: 'githubActionsDockerContainer'
+        app-name: 'github-actions-java-dock-app'
         images: 'yutanglin16/dockerspringdemo:${{ github.sha }}'
